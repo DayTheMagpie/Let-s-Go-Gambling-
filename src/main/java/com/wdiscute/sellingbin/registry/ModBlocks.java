@@ -1,5 +1,6 @@
-package com.wdiscute.sellingbin;
+package com.wdiscute.sellingbin.registry;
 
+import com.wdiscute.sellingbin.SellingBin;
 import com.wdiscute.sellingbin.bin.SellingBinBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

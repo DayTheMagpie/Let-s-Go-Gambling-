@@ -1,12 +1,16 @@
 package com.wdiscute.sellingbin.processors;
 
 import com.mojang.serialization.MapCodec;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DurabilityProcessor extends AbstractProcessor
 {
-    public DurabilityProcessor() {}
+    public DurabilityProcessor(){}
 
     public static final MapCodec<DurabilityProcessor> CODEC = MapCodec.unit(DurabilityProcessor::new);
 
@@ -20,6 +24,23 @@ public class DurabilityProcessor extends AbstractProcessor
     public DeferredHolder<AbstractProcessor, AbstractProcessor> getRegistryHolder()
     {
         return ModProcessors.DURABILITY;
+    }
+
+    @Override
+    public boolean showDescriptionOnEmi()
+    {
+        return true;
+    }
+
+    @Override
+    public List<Component> getDescription()
+    {
+        List<Component> list = new ArrayList<>();
+
+        list.add(Component.literal("- Price is scaled based"));
+        list.add(Component.literal("on remaining durability."));
+
+        return list;
     }
 
     @Override

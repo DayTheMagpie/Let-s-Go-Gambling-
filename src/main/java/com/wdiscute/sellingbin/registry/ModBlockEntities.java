@@ -1,5 +1,6 @@
-package com.wdiscute.sellingbin;
+package com.wdiscute.sellingbin.registry;
 
+import com.wdiscute.sellingbin.SellingBin;
 import com.wdiscute.sellingbin.bin.SellingBinBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;

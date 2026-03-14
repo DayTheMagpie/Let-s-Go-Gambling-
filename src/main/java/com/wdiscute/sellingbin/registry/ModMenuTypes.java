@@ -1,5 +1,6 @@
-package com.wdiscute.sellingbin;
+package com.wdiscute.sellingbin.registry;
 
+import com.wdiscute.sellingbin.SellingBin;
 import com.wdiscute.sellingbin.bin.SellingBinMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;

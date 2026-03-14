@@ -1,19 +1,45 @@
 package com.wdiscute.sellingbin.event;
 
-import com.wdiscute.sellingbin.ModMenuTypes;
+import com.wdiscute.sellingbin.registry.ModMenuTypes;
 import com.wdiscute.sellingbin.SellingBin;
 import com.wdiscute.sellingbin.bin.SellingBinScreen;
-import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.*;
+import net.neoforged.neoforge.client.gui.ConfigurationScreen;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.event.AddPackFindersEvent;
 
 @EventBusSubscriber(modid = SellingBin.MOD_ID, value = Dist.CLIENT)
 public class ModClientEvents
 {
+
+    public ModClientEvents(ModContainer modContainer)
+    {
+        modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+    }
+
+    @SubscribeEvent
+    public static void addPackFinders(AddPackFindersEvent event)
+    {
+        //resourcepack must be under resources/pathname/assets/etc
+
+//        event.addPackFinders(
+//                SellingBin.rl("test"),
+//                PackType.CLIENT_RESOURCES,
+//                Component.literal("test_pack"),
+//                PackSource.FEATURE,
+//                false,
+//                Pack.Position.TOP
+//        );
+    }
+
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event)
     {

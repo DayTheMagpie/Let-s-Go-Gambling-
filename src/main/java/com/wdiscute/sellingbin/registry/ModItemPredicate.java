@@ -1,6 +1,7 @@
-package com.wdiscute.sellingbin;
+package com.wdiscute.sellingbin.registry;
 
 import com.mojang.serialization.Codec;
+import com.wdiscute.sellingbin.SellingBin;
 import net.minecraft.advancements.critereon.ItemSubPredicate;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.ItemStack;
@@ -29,7 +30,7 @@ public interface ModItemPredicate
 
         public boolean matches(ItemStack stack)
         {
-            return ModDataMaps.getOrDefault(stack, ModDataMaps.SELLING_BIN_VALUE, ModDataMaps.ItemValue.empty()).baseValue() > 0;
+            return ModDataMaps.getOrDefault(stack, ModDataMaps.SELLING_BIN_VALUE, ModDataMaps.ItemValue.EMPTY).baseValue() > 0;
         }
     }
 }

@@ -1,11 +1,10 @@
-package com.wdiscute.sellingbin;
+package com.wdiscute.sellingbin.registry;
 
+import com.wdiscute.sellingbin.SellingBin;
 import net.minecraft.advancements.CriterionTrigger;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Supplier;
 
 public interface ModCriterionTriggers
 {

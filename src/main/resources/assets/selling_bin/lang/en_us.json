@@ -2,6 +2,27 @@
   "selling_bin.configuration.always_show_selling_bin_price" : "Always Show Selling Bin Prices",
   "selling_bin.configuration.selling_in_multiplier" : "Selling Bin Multiplier",
 
+
+  "emi.category.selling_bin.selling_bin_selling" : "Selling Bin",
+  "emi.category.selling_bin.selling_bin_currencies" : "Selling Bin Currencies",
+
+  "gui.selling_bin.selling.empty.0" : "There are no Selling Bin sellable items registered!",
+  "gui.selling_bin.selling.empty.1" : "The Selling Bin does not work without a datapack!",
+  "gui.selling_bin.selling.empty.2" : "Check the mod's wiki for premade datapacks you can use,",
+  "gui.selling_bin.selling.empty.3" : "and tutorials on how to customize your own.",
+
+
+  "gui.selling_bin.currency.empty.0" : "There are no Selling Bin currencies registered!",
+  "gui.selling_bin.currency.empty.1" : "The Selling Bin does not work without a datapack!",
+  "gui.selling_bin.currency.empty.2" : "Check the mod's wiki for premade datapacks you can use,",
+  "gui.selling_bin.currency.empty.3" : "and tutorials on how to customize your own.",
+
+
+
+  "gui.selling_bin.value" : "value",
+  "gui.selling_bin.base_price" : "Price:",
+  "gui.selling_bin.processors" : "Processors:",
+
   "block.selling_bin.selling_bin" : "Selling Bin",
 
   "gui.selling_bin.selling_bin.sell" : "Sell",
@@ -9,5 +30,9 @@
   "gui.selling_bin.selling_bin.auto_sell" : "Auto-Sell",
   "gui.selling_bin.selling_bin.sell_sound" : "Sell Sound",
   "gui.selling_bin.selling_bin.currency_selected" : "Currency:",
-  "gui.selling_bin.selling_bin.highest" : "Highest Possible"
+  "gui.selling_bin.selling_bin.highest" : "Highest Possible",
+
+
+  "item.minecraft.emerald.plural" : "Emeralds",
+  "block.minecraft.emerald_block.plural" : "Emerald Blocks"
 }

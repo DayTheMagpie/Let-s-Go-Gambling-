@@ -1,6 +1,6 @@
 package com.wdiscute.sellingbin.bin;
 
-import com.wdiscute.sellingbin.ModMenuTypes;
+import com.wdiscute.sellingbin.registry.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;

@@ -1,7 +1,7 @@
 package com.wdiscute.sellingbin.datagen;
 
-import com.wdiscute.sellingbin.ModBlocks;
-import com.wdiscute.sellingbin.ModItemPredicate;
+import com.wdiscute.sellingbin.registry.ModBlocks;
+import com.wdiscute.sellingbin.registry.ModItemPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate.Builder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

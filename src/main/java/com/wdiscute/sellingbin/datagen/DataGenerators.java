@@ -29,6 +29,11 @@ public class DataGenerators
         PackOutput output = gen.getPackOutput();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        //loot table
+        gen.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(),
+                List.of(new LootTableProvider.SubProviderEntry(DGModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+
+
         //recipe
         gen.addProvider(event.includeServer(), new DGRecipeProvider(output, lookupProvider));
 

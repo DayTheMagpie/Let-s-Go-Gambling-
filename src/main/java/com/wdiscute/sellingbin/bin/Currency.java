@@ -1,7 +1,8 @@
 package com.wdiscute.sellingbin.bin;
 
 import com.wdiscute.sellingbin.Config;
-import com.wdiscute.sellingbin.ModDataMaps;
+import com.wdiscute.sellingbin.processors.AbstractProcessor;
+import com.wdiscute.sellingbin.registry.ModDataMaps;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -43,7 +44,7 @@ public record Currency(Item item, int value)
     //this does not take into account stack count!
     public static int calculateValueFromSingleStack(ItemStack is)
     {
-        ModDataMaps.ItemValue itemValue = ModDataMaps.getOrDefault(is, ModDataMaps.SELLING_BIN_VALUE, ModDataMaps.ItemValue.empty());
+        ModDataMaps.ItemValue itemValue = ModDataMaps.getOrDefault(is, ModDataMaps.SELLING_BIN_VALUE, ModDataMaps.ItemValue.EMPTY);
 
         int value = itemValue.baseValue();
 
@@ -116,12 +117,6 @@ public record Currency(Item item, int value)
         }
 
         return comps;
-    }
-
-
-    public static Component getPluralTranslation(ItemStack itemStack)
-    {
-        return getPluralTranslation(itemStack.getItem());
     }
 
     public static Component getPluralTranslation(Item item)

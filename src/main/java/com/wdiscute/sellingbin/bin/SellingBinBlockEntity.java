@@ -1,7 +1,7 @@
 package com.wdiscute.sellingbin.bin;
 
-import com.wdiscute.sellingbin.ModBlockEntities;
-import com.wdiscute.sellingbin.ModDataMaps;
+import com.wdiscute.sellingbin.registry.ModBlockEntities;
+import com.wdiscute.sellingbin.registry.ModDataMaps;
 import net.minecraft.core.*;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -74,7 +74,7 @@ public class SellingBinBlockEntity extends AbstractMultiBlockEntity implements W
     public void sell(boolean all)
     {
         int value = Currency.calculateValueFromSingleStack(getItem(SellingBinMenu.ITEM_SLOT));
-        ModDataMaps.ItemValue itemValue = ModDataMaps.getOrDefault(getItem(SellingBinMenu.ITEM_SLOT), ModDataMaps.SELLING_BIN_VALUE, ModDataMaps.ItemValue.empty());
+        ModDataMaps.ItemValue itemValue = ModDataMaps.getOrDefault(getItem(SellingBinMenu.ITEM_SLOT), ModDataMaps.SELLING_BIN_VALUE, ModDataMaps.ItemValue.EMPTY);
         if (value <= 0) return;
 
         boolean sold = false;

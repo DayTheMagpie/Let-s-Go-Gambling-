@@ -1,6 +1,6 @@
 package com.wdiscute.sellingbin.bin;
 
-import com.wdiscute.sellingbin.ModBlockEntities;
+import com.wdiscute.sellingbin.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
