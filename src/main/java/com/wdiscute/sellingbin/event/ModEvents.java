@@ -2,7 +2,6 @@ package com.wdiscute.sellingbin.event;
 
 import com.wdiscute.sellingbin.registry.ModDataMaps;
 import com.wdiscute.sellingbin.SellingBin;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
@@ -12,8 +11,6 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.neoforge.registries.NewRegistryEvent;
 import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
-
-import java.util.function.UnaryOperator;
 
 @EventBusSubscriber(modid = SellingBin.MOD_ID)
 public class ModEvents
