@@ -63,7 +63,7 @@ public class EnchantmentProcessor extends AbstractProcessor
     @Override
     public List<Component> getDescription()
     {
-        return List.of(Component.translatable("gui.selling_bin.processor.food"));
+        return List.of(Component.translatable("gui.selling_bin.processor.enchantments"));
     }
 
     @Override
