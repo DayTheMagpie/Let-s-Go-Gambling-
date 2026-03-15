@@ -22,5 +22,4 @@ public class Config
             .defineInRange("selling_bin_multiplier", 1d, 0d, 9999999d);
 
     static final ModConfigSpec SPEC_SERVER = BUILDER_SERVER.build();
-
 }
