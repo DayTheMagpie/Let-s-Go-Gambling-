@@ -7,7 +7,7 @@ license="MIT"
 issueTrackerURL="https://discord.gg/WsuFsGSegD" #optional
 
 [[mods]] #mandatory
-modId="selling_bin"
+modId="letsgogambling"
 version="${mod_version}"
 displayName="${mod_name}"
 displayURL="http://curseforge.com/minecraft/mc-mods/wds-selling-bin"
@@ -21,7 +21,7 @@ DayTheMagpie - Selling Bin UI Art
 Redeix - Selling Bin model
 '''
 
-[[dependencies.selling_bin]] #optional
+[[dependencies.letsgogambling]] #optional
 modId="neoforge" #mandatory
 type="required" #mandatory
 versionRange="${neo_version_range}" #mandatory
@@ -29,7 +29,7 @@ ordering="AFTER"
 side="BOTH"
 
 # Here's another dependency
-[[dependencies.selling_bin]]
+[[dependencies.letsgogambling]]
 modId="minecraft"
 type="required"
 versionRange="${minecraft_version_range}"
