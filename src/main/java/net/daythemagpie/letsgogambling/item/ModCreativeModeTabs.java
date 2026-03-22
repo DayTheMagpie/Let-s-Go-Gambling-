@@ -15,11 +15,16 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, LetsGoGambling.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> CASINO_MACHINES_TAB = CREATIVE_MODE_TABS.register("casino_machines_tab",
+    public static final Supplier<CreativeModeTab> GAMBLING_TAB = CREATIVE_MODE_TABS.register("letsgogambling_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.SLOT_MACHINE))
-                    .title(Component.translatable("creativetab.casino_machines_tab"))
+                    .title(Component.translatable("creativetab.letsgogambling_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.SLOT_MACHINE);
+                        output.accept(ModBlocks.EXPENSIVE_TWIST_WOOL);
+                        output.accept(ModBlocks.EXPENSIVE_STRIPED_WOOL);
+                        output.accept(ModBlocks.EXPENSIVE_TILED_WOOL);
+                        output.accept(ModBlocks.EXPENSIVE_RETRO_WOOL);
+                        output.accept(ModItems.PRIZE_TICKET);
                     })
                     .build());
 

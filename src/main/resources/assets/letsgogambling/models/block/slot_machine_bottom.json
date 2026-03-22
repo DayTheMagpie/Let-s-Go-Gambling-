@@ -3,7 +3,8 @@
 	"credit": "Made with Blockbench by DayTheMagpie",
 	"texture_size": [64, 64],
 	"textures": {
-		"texture": "letsgogambling:block/slot_machine"
+		"texture": "letsgogambling:block/slot_machine",
+		"particle": "minecraft:block/gold_block"
 	},
 	"elements": [
 		{

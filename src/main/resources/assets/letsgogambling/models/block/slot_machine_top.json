@@ -1,9 +1,10 @@
 {
 	"format_version": "1.9.0",
-	"credit": "Made with Blockbench by DayTheMagpie by DayTheMagpie",
+	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"texture": "letsgogambling:block/slot_machine"
+		"texture": "letsgogambling:block/slot_machine",
+		"particle": "minecraft:block/gold_block"
 	},
 	"elements": [
 		{
@@ -99,7 +100,7 @@
 		{
 			"from": [11, 0, 1.5],
 			"to": [13, 1, 3.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [11, 0, 1.5]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 0.5, 2.5]},
 			"faces": {
 				"north": {"uv": [15.5, 1.5, 16, 1.75], "texture": "#texture"},
 				"east": {"uv": [15.5, 1.75, 16, 2], "texture": "#texture"},
@@ -112,36 +113,28 @@
 		{
 			"from": [8, 0, 1.5],
 			"to": [10, 1, 3.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 1.5]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [9, 0.5, 2.5]},
 			"faces": {
 				"north": {"uv": [15.5, 1.5, 16, 1.75], "texture": "#texture"},
 				"east": {"uv": [15.5, 1.75, 16, 2], "texture": "#texture"},
 				"south": {"uv": [15.5, 2, 16, 2.25], "texture": "#texture"},
 				"west": {"uv": [15.5, 2.25, 16, 2.5], "texture": "#texture"},
-				"up": {"uv": [15.5, 1, 16, 1.5], "texture": "#texture"},
-				"down": {"uv": [15.5, 3, 16, 3.5], "texture": "#texture"}
+				"up": {"uv": [15.5, 1, 16, 1.5], "rotation": 180, "texture": "#texture"},
+				"down": {"uv": [15.5, 3, 16, 3.5], "rotation": 180, "texture": "#texture"}
 			}
 		},
 		{
 			"from": [5, 0, 1.5],
 			"to": [7, 1, 3.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [5, 0, 1.5]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0.5, 2.5]},
 			"faces": {
 				"north": {"uv": [15.5, 1.5, 16, 1.75], "texture": "#texture"},
 				"east": {"uv": [15.5, 1.75, 16, 2], "texture": "#texture"},
 				"south": {"uv": [15.5, 2, 16, 2.25], "texture": "#texture"},
 				"west": {"uv": [15.5, 2.25, 16, 2.5], "texture": "#texture"},
-				"up": {"uv": [15.5, 1, 16, 1.5], "texture": "#texture"},
-				"down": {"uv": [15.5, 3, 16, 3.5], "texture": "#texture"}
+				"up": {"uv": [15.5, 1, 16, 1.5], "rotation": 180, "texture": "#texture"},
+				"down": {"uv": [15.5, 3, 16, 3.5], "rotation": 180, "texture": "#texture"}
 			}
-		}
-	],
-	"groups": [
-		{
-			"name": "Top Half",
-			"origin": [0, 16, -1],
-			"color": 0,
-			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 		}
 	]
 }

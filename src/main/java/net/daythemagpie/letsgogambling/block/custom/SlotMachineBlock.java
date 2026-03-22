@@ -25,7 +25,7 @@ import java.util.function.Function;
 
 public class SlotMachineBlock extends AbstractMultiBlock implements IPreviewableMultiblock {
     public SlotMachineBlock() {
-        super(Properties.ofFullCopy(Blocks.IRON_BLOCK).noOcclusion());
+        super(Properties.ofFullCopy(Blocks.IRON_BLOCK).noOcclusion().lightLevel(state -> 8));
         registerDefaultState(defaultBlockState().setValue(PART,MachinePart.BOTTOM));
     }
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;

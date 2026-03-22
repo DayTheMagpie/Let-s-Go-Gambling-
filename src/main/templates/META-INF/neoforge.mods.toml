@@ -4,21 +4,20 @@ loaderVersion="[2,]" #mandatory
 
 license="MIT"
 
-issueTrackerURL="https://discord.gg/WsuFsGSegD" #optional
+issueTrackerURL="" #optional
 
 [[mods]] #mandatory
 modId="letsgogambling"
 version="${mod_version}"
 displayName="${mod_name}"
-displayURL="http://curseforge.com/minecraft/mc-mods/wds-selling-bin"
+displayURL="https://github.com/DayTheMagpie/Let-s-Go-Gambling-"
 logoFile = "icon.png"
 mod_authors="${mod_authors}" #optional
-description='''A data-driven Selling Bin mod
+description='''A decorative mod... for now.
 
 Credits:
-wdiscute - Main Developer
-DayTheMagpie - Selling Bin UI Art
-Redeix - Selling Bin model
+DayTheMagpie - Art and Code
+wdiscute - Being my braincell while I learned how to code
 '''
 
 [[dependencies.letsgogambling]] #optional
@@ -35,3 +34,10 @@ type="required"
 versionRange="${minecraft_version_range}"
 ordering="AFTER"
 side="BOTH"
+
+[[dependencies.letsgogambling]]
+modId="fusion"
+type="optional"
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="CLIENT"

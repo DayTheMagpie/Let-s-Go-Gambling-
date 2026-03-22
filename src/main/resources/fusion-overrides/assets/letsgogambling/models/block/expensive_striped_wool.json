@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "letsgogambling:block/expensive_striped_wool"
+  },
+  "loader": "fusion:model",
+  "type": "connecting",
+  "connections": [
+    {
+      "type": "is_same_block"
+    }
+  ]
+}

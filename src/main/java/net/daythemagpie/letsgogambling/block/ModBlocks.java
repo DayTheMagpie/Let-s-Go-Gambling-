@@ -6,6 +6,8 @@ import net.daythemagpie.letsgogambling.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -20,6 +22,11 @@ public interface ModBlocks {
 
     DeferredBlock<Block> SLOT_MACHINE = registerBlock("slot_machine",
             SlotMachineBlock::new);
+
+    DeferredBlock<Block> EXPENSIVE_TWIST_WOOL = registerBlock("expensive_twist_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
+    DeferredBlock<Block> EXPENSIVE_STRIPED_WOOL = registerBlock("expensive_striped_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
+    DeferredBlock<Block> EXPENSIVE_TILED_WOOL = registerBlock("expensive_tiled_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
+    DeferredBlock<Block> EXPENSIVE_RETRO_WOOL = registerBlock("expensive_retro_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

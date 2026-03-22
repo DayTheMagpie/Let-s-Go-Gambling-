@@ -1,0 +1,15 @@
+{
+    "ctm":{
+        "ctm_version": 1,
+        "type":"ctm",
+        "layer":"SOLID",
+        "textures":[
+            "letsgogambling:block/expensive_twist_wool_ctm"
+        ],
+        "extra": {
+            "connect_to": [
+				{ "block": "letsgogambling:block/expensive_twist_wool" }
+            ]
+        }
+    }
+}

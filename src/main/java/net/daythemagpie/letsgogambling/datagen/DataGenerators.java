@@ -31,10 +31,11 @@ public class DataGenerators {
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTables::new, LootContextParamSets.BLOCK)), lookupProvider));
 
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput,existingFileHelper));
-
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput,existingFileHelper));
 
         ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
                 new ModBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+
     }
 }

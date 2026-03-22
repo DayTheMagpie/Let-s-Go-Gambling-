@@ -6,11 +6,6 @@ plugins {
 }
 
 tasks.named('wrapper', Wrapper).configure {
-    // Define wrapper values here so as to not have to always do so when updating gradlew.properties.
-    // Switching this to Wrapper.DistributionType.ALL will download the full gradle sources that comes with
-    // documentation attached on cursor hover of gradle classes and methods. However, this comes with increased
-    // file size for Gradle. If you do switch this to ALL, run the Gradle wrapper task twice afterwards.
-    // (Verify by checking gradle/wrapper/gradle-wrapper.properties to see if distributionUrl now points to `-all`)
     distributionType = Wrapper.DistributionType.BIN
 }
 
@@ -54,20 +49,11 @@ repositories
         }
 
 dependencies {
-    jarJar(implementation(group: 'com.wdiscute', name: 'libtooltips')) {
-        version {
-            // Version used in your workspace and bundled in mod jar
-            prefer '1.4'
-        }
-    }
-
     //tiny multiblock lib
     jarJar(implementation("maven.modrinth:tiny-multiblock-lib:neo-1.21.1-${tiny_multiblock_lib_version}"))
 
-    //EMI
-    compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
-    runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
-
+    //Fusion
+    implementation "maven.modrinth:fusion-connected-textures:1.2.12-neoforge-mc1.21.1"
 }
 
 publishing {
@@ -82,7 +68,7 @@ publishing {
         if (System.getenv("MAVEN_USER") == null || System.getenv("MAVEN_PASS") == null) {
             mavenLocal()
         } else maven {
-            name = "wdReleases"
+            name = "Releases"
             url = "https://maven.favouriteless.net/releases"
 
             credentials {
