@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "facing=north,part=back": {
+      "model": "letsgogambling:block/poker_table_back"
+    },
+    "facing=east,part=back": {
+      "model": "letsgogambling:block/poker_table_back",
+      "y": 90
+    },
+    "facing=south,part=back": {
+      "model": "letsgogambling:block/poker_table_back",
+      "y": 180
+    },
+    "facing=west,part=back": {
+      "model": "letsgogambling:block/poker_table_back",
+      "y": 270
+    },
+
+    "facing=north,part=front": {
+      "model": "letsgogambling:block/poker_table_front"
+    },
+    "facing=east,part=front": {
+      "model": "letsgogambling:block/poker_table_front",
+      "y": 90
+    },
+    "facing=south,part=front": {
+      "model": "letsgogambling:block/poker_table_front",
+      "y": 180
+    },
+    "facing=west,part=front": {
+      "model": "letsgogambling:block/poker_table_front",
+      "y": 270
+    }
+  }
+}

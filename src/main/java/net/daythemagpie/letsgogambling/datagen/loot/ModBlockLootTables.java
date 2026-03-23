@@ -5,6 +5,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.fml.common.Mod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.SLOT_MACHINE.get());
+        this.dropSelf(ModBlocks.POKER_TABLE.get());
 
     }
 
@@ -25,6 +27,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected Iterable<Block> getKnownBlocks() {
         List<Block> list = new ArrayList<>();
         list.add(ModBlocks.SLOT_MACHINE.get());
+        list.add(ModBlocks.POKER_TABLE.get());
 
 
         return list::iterator;

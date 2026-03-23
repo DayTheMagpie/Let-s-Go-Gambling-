@@ -19,10 +19,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(ModTags.Blocks.CHANCE_MACHINE)
-                .add(ModBlocks.SLOT_MACHINE.get());
+        this.tag(ModTags.Blocks.CHANCE_MACHINE).add(ModBlocks.SLOT_MACHINE.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.SLOT_MACHINE.get());
 
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.SLOT_MACHINE.get());
+        this.tag(ModTags.Blocks.CHANCE_MACHINE).add(ModBlocks.POKER_TABLE.get());
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.POKER_TABLE.get());
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "letsgogambling:block/ticket_stack_top",
+    "side": "letsgogambling:block/ticket_stack"
+  }
+}
