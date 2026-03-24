@@ -4,7 +4,6 @@ import net.daythemagpie.letsgogambling.block.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -24,7 +23,7 @@ import java.util.List;
 import java.util.function.Function;
 
 public class PokerTableBlock extends AbstractMultiBlock implements IPreviewableMultiblock {
-    public PokerTableBlock(Properties properties) {
+    public PokerTableBlock() {
         super(Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion());
         registerDefaultState(defaultBlockState().setValue(PART, TablePart.BACK));
     }
@@ -33,7 +32,11 @@ public class PokerTableBlock extends AbstractMultiBlock implements IPreviewableM
     public static final EnumProperty<PokerTableBlock.TablePart> PART = EnumProperty.create("part", PokerTableBlock.TablePart.class);
     ;public enum TablePart implements StringRepresentable, IBlockPosOffsetEnum {
         BACK("back", pos -> pos),
-        FRONT("front", pos -> pos.north());
+        FRONT("front", BlockPos::north),
+        BACK_LEFT("back_left", BlockPos::east),
+        BACK_RIGHT("back_right", BlockPos::west),
+        FRONT_LEFT("front_left", pos -> pos.north().east()),
+        FRONT_RIGHT("front_right", pos -> pos.north().west());
 
         TablePart(String name, Function<BlockPos,BlockPos> offset){
             this.name = name;
@@ -44,60 +47,41 @@ public class PokerTableBlock extends AbstractMultiBlock implements IPreviewableM
         private final Function<BlockPos,BlockPos> offset;
 
         @Override
-        public String getSerializedName() {
-            return name;
-        }
+        public String getSerializedName() {return name;}
 
         @Override
-        public Function<BlockPos, BlockPos> getOffsetFunction() {
-            return offset;
-        }
+        public Function<BlockPos, BlockPos> getOffsetFunction() {return offset;}
 
         @Override
-        public String toString() {
-            return name;
-        }
+        public String toString() {return name;}
     }
 
     @Override
-    public @Nullable DirectionProperty getDirectionProperty() {
-        return FACING;
+    public List<BlockPos> makeFullBlockShape(Level level, BlockPos center, BlockState blockState, @Nullable BlockEntity blockEntity, @Nullable Direction direction) {
+        assert direction !=null;
+        return List.of(
+                center,
+                center.relative(direction),
+                center.relative(direction.getClockWise()),
+                center.relative(direction.getCounterClockWise()),
+                center.relative(direction).relative(direction.getClockWise()),
+                center.relative(direction).relative(direction.getCounterClockWise())
+        );
     }
 
     @Override
-    public RenderShape getMultiblockRenderShape(BlockState blockState, boolean b) {
-        return RenderShape.MODEL;
-    }
+    public @Nullable DirectionProperty getDirectionProperty() {return FACING;}
 
     @Override
-    public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return ModBlockEntities.POKER_TABLE_BLOCK_ENTITY.get().create(pPos,pState);
-    }
+    public RenderShape getMultiblockRenderShape(BlockState blockState, boolean b) {return RenderShape.MODEL;}
 
     @Override
-    public List<BlockPos> makeFullBlockShape(Level level, BlockPos blockPos, BlockState blockState, @Nullable BlockEntity blockEntity, @Nullable Direction direction) {
-        return List.of(blockPos, blockPos.north());
-    }
+    public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {return ModBlockEntities.POKER_TABLE_BLOCK_ENTITY.get().create(pPos,pState);}
 
     @Override
     public BlockState getStateForEachBlock(BlockState state, BlockPos pos, BlockPos centerOffset, Level level, @Nullable Direction direction) {
-        state = state.setValue(PokerTableBlock.PART, IBlockPosOffsetEnum.fromOffset(PokerTableBlock.TablePart.class, centerOffset, direction, PokerTableBlock.TablePart.FRONT));
-
+        state = state.setValue(PokerTableBlock.PART, IBlockPosOffsetEnum.fromOffset(PokerTableBlock.TablePart.class, centerOffset, direction, TablePart.BACK));
         return state;
-    }
-
-
-
-
-
-    @Override
-    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-        return getStateForPlacementHelper(context, context.getHorizontalDirection().getOpposite());
-    }
-
-    @Override
-    public BlockState getDefaultStateForPreviews(Direction direction) {
-        return IPreviewableMultiblock.super.getDefaultStateForPreviews(direction.getOpposite());
     }
 
     @Override
@@ -107,7 +91,5 @@ public class PokerTableBlock extends AbstractMultiBlock implements IPreviewableM
     }
 
     @Override
-    public boolean hasCustomBE() {
-        return true;
-    }
+    public boolean hasCustomBE() {return true;}
 }
