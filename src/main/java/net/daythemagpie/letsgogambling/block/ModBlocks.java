@@ -2,6 +2,7 @@ package net.daythemagpie.letsgogambling.block;
 
 import net.daythemagpie.letsgogambling.LetsGoGambling;
 import net.daythemagpie.letsgogambling.block.custom.PokerTableBlock;
+import net.daythemagpie.letsgogambling.block.custom.RouletteTableBlock;
 import net.daythemagpie.letsgogambling.block.custom.SlotMachineBlock;
 import net.daythemagpie.letsgogambling.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -22,6 +23,7 @@ public interface ModBlocks {
     //Game Blocks
     DeferredBlock<Block> SLOT_MACHINE = registerBlock("slot_machine", SlotMachineBlock::new);
     DeferredBlock<Block> POKER_TABLE = registerBlock("poker_table", PokerTableBlock::new);
+    DeferredBlock<Block> ROULETTE_TABLE = registerBlock("roulette_table", RouletteTableBlock::new);
 
     //Expensive Wool Blocks
     DeferredBlock<Block> EXPENSIVE_TWIST_WOOL = registerBlock("expensive_twist_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));

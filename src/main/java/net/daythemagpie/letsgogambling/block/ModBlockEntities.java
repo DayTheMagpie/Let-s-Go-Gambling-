@@ -2,6 +2,7 @@ package net.daythemagpie.letsgogambling.block;
 
 import net.daythemagpie.letsgogambling.LetsGoGambling;
 import net.daythemagpie.letsgogambling.block.custom.PokerTableBlockEntity;
+import net.daythemagpie.letsgogambling.block.custom.RouletteTableBlockEntity;
 import net.daythemagpie.letsgogambling.block.custom.SlotMachineBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -23,6 +24,9 @@ public interface ModBlockEntities {
 
     Supplier<BlockEntityType<PokerTableBlockEntity>> POKER_TABLE_BLOCK_ENTITY=
             BLOCK_ENTITIES.register("poker_table", () -> BlockEntityType.Builder.of(PokerTableBlockEntity::new,ModBlocks.POKER_TABLE.get())
+                    .build(null));
+    Supplier<BlockEntityType<RouletteTableBlockEntity>> ROULETTE_TABLE_BLOCK_ENTITY=
+            BLOCK_ENTITIES.register("roulette_table", () -> BlockEntityType.Builder.of(RouletteTableBlockEntity::new,ModBlocks.ROULETTE_TABLE.get())
                     .build(null));
 
     static void register(IEventBus eventBus){

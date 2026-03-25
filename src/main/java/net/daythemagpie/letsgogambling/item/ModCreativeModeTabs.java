@@ -19,14 +19,21 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.SLOT_MACHINE))
                     .title(Component.translatable("creativetab.letsgogambling_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        //Machines
                         output.accept(ModBlocks.SLOT_MACHINE);
                         output.accept(ModBlocks.POKER_TABLE);
+                        output.accept(ModBlocks.ROULETTE_TABLE);
+
+                        //Carpet blocks
                         output.accept(ModBlocks.EXPENSIVE_TWIST_WOOL);
                         output.accept(ModBlocks.EXPENSIVE_STRIPED_WOOL);
                         output.accept(ModBlocks.EXPENSIVE_TILED_WOOL);
                         output.accept(ModBlocks.EXPENSIVE_RETRO_WOOL);
+
+                        //Misc. blocks
                         output.accept(ModBlocks.TICKET_STACK);
 
+                        //Items
                         output.accept(ModItems.PRIZE_TICKET);
                     })
                     .build());

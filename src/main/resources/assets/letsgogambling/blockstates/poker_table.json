@@ -1,98 +1,98 @@
 {
   "variants": {
     "facing=north,part=back": {
-      "model": "letsgogambling:block/poker_table_back"
+      "model": "letsgogambling:block/poker_table/poker_table_back"
     },
     "facing=east,part=back": {
-      "model": "letsgogambling:block/poker_table_back",
+      "model": "letsgogambling:block/poker_table/poker_table_back",
       "y": 90
     },
     "facing=south,part=back": {
-      "model": "letsgogambling:block/poker_table_back",
+      "model": "letsgogambling:block/poker_table/poker_table_back",
       "y": 180
     },
     "facing=west,part=back": {
-      "model": "letsgogambling:block/poker_table_back",
+      "model": "letsgogambling:block/poker_table/poker_table_back",
       "y": 270
     },
 
     "facing=north,part=front": {
-      "model": "letsgogambling:block/poker_table_front"
+      "model": "letsgogambling:block/poker_table/poker_table_front"
     },
     "facing=east,part=front": {
-      "model": "letsgogambling:block/poker_table_front",
+      "model": "letsgogambling:block/poker_table/poker_table_front",
       "y": 90
     },
     "facing=south,part=front": {
-      "model": "letsgogambling:block/poker_table_front",
+      "model": "letsgogambling:block/poker_table/poker_table_front",
       "y": 180
     },
     "facing=west,part=front": {
-      "model": "letsgogambling:block/poker_table_front",
+      "model": "letsgogambling:block/poker_table/poker_table_front",
       "y": 270
     },
 
     "facing=north,part=back_left": {
-      "model": "letsgogambling:block/poker_table_back_left"
+      "model": "letsgogambling:block/poker_table/poker_table_back_left"
     },
     "facing=east,part=back_left": {
-      "model": "letsgogambling:block/poker_table_back_left",
+      "model": "letsgogambling:block/poker_table/poker_table_back_left",
       "y": 90
     },
     "facing=south,part=back_left": {
-      "model": "letsgogambling:block/poker_table_back_left",
+      "model": "letsgogambling:block/poker_table/poker_table_back_left",
       "y": 180
     },
     "facing=west,part=back_left": {
-      "model": "letsgogambling:block/poker_table_back_left",
+      "model": "letsgogambling:block/poker_table/poker_table_back_left",
       "y": 270
     },
 
     "facing=north,part=back_right": {
-      "model": "letsgogambling:block/poker_table_back_right"
+      "model": "letsgogambling:block/poker_table/poker_table_back_right"
     },
     "facing=east,part=back_right": {
-      "model": "letsgogambling:block/poker_table_back_right",
+      "model": "letsgogambling:block/poker_table/poker_table_back_right",
       "y": 90
     },
     "facing=south,part=back_right": {
-      "model": "letsgogambling:block/poker_table_back_right",
+      "model": "letsgogambling:block/poker_table/poker_table_back_right",
       "y": 180
     },
     "facing=west,part=back_right": {
-      "model": "letsgogambling:block/poker_table_back_right",
+      "model": "letsgogambling:block/poker_table/poker_table_back_right",
       "y": 270
     },
 
     "facing=north,part=front_left": {
-      "model": "letsgogambling:block/poker_table_front_left"
+      "model": "letsgogambling:block/poker_table/poker_table_front_left"
     },
     "facing=east,part=front_left": {
-      "model": "letsgogambling:block/poker_table_front_left",
+      "model": "letsgogambling:block/poker_table/poker_table_front_left",
       "y": 90
     },
     "facing=south,part=front_left": {
-      "model": "letsgogambling:block/poker_table_front_left",
+      "model": "letsgogambling:block/poker_table/poker_table_front_left",
       "y": 180
     },
     "facing=west,part=front_left": {
-      "model": "letsgogambling:block/poker_table_front_left",
+      "model": "letsgogambling:block/poker_table/poker_table_front_left",
       "y": 270
     },
 
     "facing=north,part=front_right": {
-      "model": "letsgogambling:block/poker_table_front_right"
+      "model": "letsgogambling:block/poker_table/poker_table_front_right"
     },
     "facing=east,part=front_right": {
-      "model": "letsgogambling:block/poker_table_front_right",
+      "model": "letsgogambling:block/poker_table/poker_table_front_right",
       "y": 90
     },
     "facing=south,part=front_right": {
-      "model": "letsgogambling:block/poker_table_front_right",
+      "model": "letsgogambling:block/poker_table/poker_table_front_right",
       "y": 180
     },
     "facing=west,part=front_right": {
-      "model": "letsgogambling:block/poker_table_front_right",
+      "model": "letsgogambling:block/poker_table/poker_table_front_right",
       "y": 270
     }
   }

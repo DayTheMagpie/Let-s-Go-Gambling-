@@ -76,7 +76,9 @@ public class SlotMachineBlock extends AbstractMultiBlock implements IPreviewable
 
     @Override
     public List<BlockPos> makeFullBlockShape(Level level, BlockPos blockPos, BlockState blockState, @Nullable BlockEntity blockEntity, @Nullable Direction direction) {
-        return List.of(blockPos, blockPos.above());
+        return List.of(
+                blockPos,
+                blockPos.above());
     }
 
     @Override
