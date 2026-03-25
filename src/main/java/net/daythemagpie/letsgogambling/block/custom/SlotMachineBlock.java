@@ -30,7 +30,7 @@ public class SlotMachineBlock extends AbstractMultiBlock implements IPreviewable
     }
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final EnumProperty<MachinePart> PART = EnumProperty.create("part", MachinePart.class);
-    ;public enum MachinePart implements StringRepresentable, IBlockPosOffsetEnum {
+    public enum MachinePart implements StringRepresentable, IBlockPosOffsetEnum {
         TOP("top", pos -> pos.above()),
         BOTTOM("bottom", pos -> pos);
 

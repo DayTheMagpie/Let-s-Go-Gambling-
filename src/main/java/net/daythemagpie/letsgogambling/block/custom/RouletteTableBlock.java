@@ -35,7 +35,7 @@ public class RouletteTableBlock extends AbstractMultiBlock implements IPreviewab
 
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final EnumProperty<RouletteTableBlock.TablePart> PART = EnumProperty.create("part", RouletteTableBlock.TablePart.class);
-    ;public enum TablePart implements StringRepresentable, IBlockPosOffsetEnum {
+    public enum TablePart implements StringRepresentable, IBlockPosOffsetEnum {
         BACK("back", pos -> pos),
         FRONT("front", BlockPos::north),
         BACK_LEFT("back_left", BlockPos::east),
