@@ -35,7 +35,7 @@ public class PokerTableBlock extends AbstractMultiBlock implements IPreviewableM
 
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final EnumProperty<PokerTableBlock.TablePart> PART = EnumProperty.create("part", PokerTableBlock.TablePart.class);
-    ;public enum TablePart implements StringRepresentable, IBlockPosOffsetEnum {
+    public enum TablePart implements StringRepresentable, IBlockPosOffsetEnum {
         BACK("back", pos -> pos),
         FRONT("front", BlockPos::north),
         BACK_LEFT("back_left", BlockPos::east),
@@ -115,11 +115,11 @@ public class PokerTableBlock extends AbstractMultiBlock implements IPreviewableM
         //top
         shape = Shapes.join(shape, Shapes.box(-1, .875, -1, 1, 1, 2), BooleanOp.OR);
         //edges
-        shape = Shapes.join(shape,Shapes.box(0, 1, 0, 1, 1.0625, .625), BooleanOp.OR);
-        shape = Shapes.join(shape,Shapes.box(-1, 1, 0, 2, 1.0625, .125), BooleanOp.OR);
-        shape = Shapes.join(shape,Shapes.box(-1, 1, 0, -.875, 1.0625, 2), BooleanOp.OR);
-        shape = Shapes.join(shape,Shapes.box(1.875, 1, 0, 2, 1.0625, 2), BooleanOp.OR);
-        shape = Shapes.join(shape,Shapes.box(-1, 1, 1.875, 2, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(.375, 1, 0, 1, 1.0625, 1), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(.875, 1, -1, 1, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, 1.875, 1, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, -1, 1, 1.0625, -.875), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, -1, -.875, 1.0625, 2), BooleanOp.OR);
 
         return shape;
     }
@@ -153,10 +153,16 @@ public class PokerTableBlock extends AbstractMultiBlock implements IPreviewableM
     {
         VoxelShape shape = Shapes.empty();
         //base
-        shape = Shapes.join(shape, Shapes.box(.25, 0, -.75, 1.75, 0.0625, 1.75), BooleanOp.OR);
-        shape = Shapes.join(shape, Shapes.box(.5, .0625, -.5, 1.5, .75, 1.5), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(.1875, .125, -.5625, 1.8125, .25, 1.5625), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(.5, 0, -.25, 1.5, .875, 1.25), BooleanOp.OR);
         //top
-        shape = Shapes.join(shape, Shapes.box(0, .75, -1, 2, 1, 2), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, .875, -1, 2, 1, 2), BooleanOp.OR);
+        //edges
+        shape = Shapes.join(shape,Shapes.box(0, 1, 0, .625, 1.0625, 1), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(1.875, 1, -1, 2, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(0, 1, 1.875, 2, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(0, 1, -1, 2, 1.0625, -.875), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(0, 1, -1, .125, 1.0625, 2), BooleanOp.OR);
 
         return shape;
     }
