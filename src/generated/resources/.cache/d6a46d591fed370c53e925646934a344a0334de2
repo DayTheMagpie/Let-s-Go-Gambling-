@@ -1,3 +1,5 @@
-// 1.21.1	2026-03-21T23:56:49.535975931	Tags for minecraft:block mod id letsgogambling
-f854b06c29cf932e01e3ddf502907aca4d82db72 data/letsgogambling/tags/block/chance_machine.json
+// 1.21.1	2026-03-29T16:01:52.135380111	Tags for minecraft:block mod id letsgogambling
+17b68f7647403424abb1d4982010808a1fbbb618 data/letsgogambling/tags/block/chance_machine.json
+47eaf111fb54f837fc5c7866eb80832e3403e960 data/minecraft/tags/block/mineable/axe.json
 f854b06c29cf932e01e3ddf502907aca4d82db72 data/minecraft/tags/block/mineable/pickaxe.json
+449a621e03c9f1a5c7fb69311c95bf4777f161cc data/minecraft/tags/block/wool.json

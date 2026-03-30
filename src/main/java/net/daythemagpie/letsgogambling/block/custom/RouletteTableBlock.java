@@ -76,6 +76,7 @@ public class RouletteTableBlock extends AbstractMultiBlock implements IPreviewab
         );
     }
 
+    //Make Hitbox
     private static final VoxelShape SHAPE_NORTH = makeShapeNorth();
     private static final VoxelShape SHAPE_EAST = makeShapeEast();
     private static final VoxelShape SHAPE_SOUTH = makeShapeSouth();

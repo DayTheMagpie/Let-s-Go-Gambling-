@@ -1,15 +1,27 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
   "key": {
-    "#": {
+    "1": {
+      "item": "minecraft:mangrove_button"
+    },
+    "2": {
       "item": "minecraft:comparator"
+    },
+    "3": {
+      "item": "minecraft:lever"
+    },
+    "4": {
+      "item": "minecraft:gold_nugget"
+    },
+    "5": {
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "123",
+    "454",
+    "454"
   ],
   "result": {
     "count": 1,

@@ -1,2 +1,5 @@
-// 1.21.1	2026-03-21T23:56:49.536052935	Loot Tables
-a8ddd4c0d463b97fdffcc37b8b632a010bf3c00b data/letsgogambling/loot_table/blocks/slot_machine.json
+// 1.21.1	2026-03-29T16:06:32.678833191	Loot Tables
+00c1997da6738d325073e59d224ab4c7e669272b data/letsgogambling/loot_table/blocks/expensive_retro_wool.json
+56985da90c3fa99a186669506f8e2e0827d13763 data/letsgogambling/loot_table/blocks/expensive_striped_wool.json
+6264f25041f5bae08687aff116e986401e590872 data/letsgogambling/loot_table/blocks/expensive_tiled_wool.json
+f08363f11a96f37acf476f59ee48e4bcc3b310a2 data/letsgogambling/loot_table/blocks/expensive_twist_wool.json

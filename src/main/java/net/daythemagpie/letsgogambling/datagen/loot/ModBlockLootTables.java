@@ -18,16 +18,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        this.dropSelf(ModBlocks.SLOT_MACHINE.get());
-        this.dropSelf(ModBlocks.POKER_TABLE.get());
+        this.dropSelf(ModBlocks.EXPENSIVE_TWIST_WOOL.get());
+        this.dropSelf(ModBlocks.EXPENSIVE_TILED_WOOL.get());
+        this.dropSelf(ModBlocks.EXPENSIVE_STRIPED_WOOL.get());
+        this.dropSelf(ModBlocks.EXPENSIVE_RETRO_WOOL.get());
 
     }
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
         List<Block> list = new ArrayList<>();
-        list.add(ModBlocks.SLOT_MACHINE.get());
-        list.add(ModBlocks.POKER_TABLE.get());
+        list.add(ModBlocks.EXPENSIVE_TWIST_WOOL.get());
+        list.add(ModBlocks.EXPENSIVE_TILED_WOOL.get());
+        list.add(ModBlocks.EXPENSIVE_STRIPED_WOOL.get());
+        list.add(ModBlocks.EXPENSIVE_RETRO_WOOL.get());
 
 
         return list::iterator;

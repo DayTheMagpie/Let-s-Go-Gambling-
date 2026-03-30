@@ -4,6 +4,7 @@ import net.daythemagpie.letsgogambling.block.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -14,6 +15,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.nikdo53.tinymultiblocklib.block.AbstractMultiBlock;
 import net.nikdo53.tinymultiblocklib.block.IPreviewableMultiblock;
 import net.nikdo53.tinymultiblocklib.components.IBlockPosOffsetEnum;
@@ -67,6 +72,108 @@ public class PokerTableBlock extends AbstractMultiBlock implements IPreviewableM
                 center.relative(direction).relative(direction.getClockWise()),
                 center.relative(direction).relative(direction.getCounterClockWise())
         );
+    }
+
+    //Make Hitbox
+    private static final VoxelShape SHAPE_NORTH = makeShapeNorth();
+    private static final VoxelShape SHAPE_EAST = makeShapeEast();
+    private static final VoxelShape SHAPE_SOUTH = makeShapeSouth();
+    private static final VoxelShape SHAPE_WEST = makeShapeWest();
+
+    public static VoxelShape makeShapeNorth()
+    {
+        VoxelShape shape = Shapes.empty();
+        //base
+        shape = Shapes.join(shape, Shapes.box(-.5625, .125, .1875, 1.5625, .25, 1.8125), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(-.25, 0, .5, 1.25, .875, 1.5), BooleanOp.OR);
+        //top
+        shape = Shapes.join(shape, Shapes.box(-1, .875, 0, 2, 1, 2), BooleanOp.OR);
+        //edges
+        shape = Shapes.join(shape,Shapes.box(0, 1, 0, 1, 1.0625, .625), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, 0, 2, 1.0625, .125), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, 0, -.875, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(1.875, 1, 0, 2, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, 1.875, 2, 1.0625, 2), BooleanOp.OR);
+
+        return shape;
+    }
+
+
+
+
+
+
+
+
+
+    public static VoxelShape makeShapeEast()
+    {
+        VoxelShape shape = Shapes.empty();
+        //base
+        shape = Shapes.join(shape, Shapes.box(-.8125, .125, -.5625, .8125, .25, 1.5625), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(-.5, 0, -.25, .5, .875, 1.25), BooleanOp.OR);
+        //top
+        shape = Shapes.join(shape, Shapes.box(-1, .875, -1, 1, 1, 2), BooleanOp.OR);
+        //edges
+        shape = Shapes.join(shape,Shapes.box(0, 1, 0, 1, 1.0625, .625), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, 0, 2, 1.0625, .125), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, 0, -.875, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(1.875, 1, 0, 2, 1.0625, 2), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, 1.875, 2, 1.0625, 2), BooleanOp.OR);
+
+        return shape;
+    }
+
+
+
+
+
+
+
+
+    public static VoxelShape makeShapeSouth()
+    {
+        VoxelShape shape = Shapes.empty();
+        //base
+        shape = Shapes.join(shape, Shapes.box(-.5625, .125, -.8125, 1.5625, .25, .8125), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(-.25, 0, -.5, 1.25, .875, .5), BooleanOp.OR);
+        //top
+        shape = Shapes.join(shape, Shapes.box(-1, .875, -1, 2, 1, 1), BooleanOp.OR);
+        //edges
+        shape = Shapes.join(shape,Shapes.box(0, 1, .375, 1, 1.0625,1), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, -1, 2, 1.0625, -.875), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, -1, -.875, 1.0625, 1), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(1.875, 1, -1, 2, 1.0625, 1), BooleanOp.OR);
+        shape = Shapes.join(shape,Shapes.box(-1, 1, .875, 2, 1.0625, 1), BooleanOp.OR);
+
+        return shape;
+    }
+
+    public static VoxelShape makeShapeWest()
+    {
+        VoxelShape shape = Shapes.empty();
+        //base
+        shape = Shapes.join(shape, Shapes.box(.25, 0, -.75, 1.75, 0.0625, 1.75), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(.5, .0625, -.5, 1.5, .75, 1.5), BooleanOp.OR);
+        //top
+        shape = Shapes.join(shape, Shapes.box(0, .75, -1, 2, 1, 2), BooleanOp.OR);
+
+        return shape;
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)
+    {
+        VoxelShape shape = switch (getDirection(state).getOpposite())
+        {
+            case NORTH -> SHAPE_NORTH;
+            case SOUTH -> SHAPE_SOUTH;
+            case WEST -> SHAPE_WEST;
+            case EAST -> SHAPE_EAST;
+            default -> null;
+        };
+
+        return voxelShapeHelper(state, level, pos, shape);
     }
 
     @Override

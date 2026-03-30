@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+    },
+    "1": {
+      "item": "minecraft:green_wool"
+    },
+    "2": {
+      "item": "minecraft:gold_ingot"
+    },
+    "3": {
+      "item": "minecraft:stripped_dark_oak_log"
+    }
+  },
+  "pattern": [
+    "#11",
+    "222",
+    " 3 "
+  ],
+  "result": {
+    "count": 1,
+    "id": "letsgogambling:roulette_table"
+  }
+}

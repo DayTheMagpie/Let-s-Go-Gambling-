@@ -24,5 +24,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(ModTags.Blocks.CHANCE_MACHINE).add(ModBlocks.POKER_TABLE.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.POKER_TABLE.get());
+
+        this.tag(ModTags.Blocks.CHANCE_MACHINE).add(ModBlocks.ROULETTE_TABLE.get());
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.ROULETTE_TABLE.get());
+
+        this.tag(BlockTags.WOOL).add(ModBlocks.EXPENSIVE_RETRO_WOOL.get());
+        this.tag(BlockTags.WOOL).add(ModBlocks.EXPENSIVE_STRIPED_WOOL.get());
+        this.tag(BlockTags.WOOL).add(ModBlocks.EXPENSIVE_TILED_WOOL.get());
+        this.tag(BlockTags.WOOL).add(ModBlocks.EXPENSIVE_TWIST_WOOL.get());
     }
 }

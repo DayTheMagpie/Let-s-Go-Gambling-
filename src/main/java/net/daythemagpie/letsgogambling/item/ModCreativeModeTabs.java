@@ -31,7 +31,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.EXPENSIVE_RETRO_WOOL);
 
                         //Misc. blocks
-                        output.accept(ModBlocks.TICKET_STACK);
+                        //output.accept(ModBlocks.TICKET_STACK);
 
                         //Items
                         output.accept(ModItems.PRIZE_TICKET);

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "letsgogambling:slot_machine"
+          "name": "letsgogambling:expensive_tiled_wool"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "letsgogambling:blocks/slot_machine"
+  "random_sequence": "letsgogambling:blocks/expensive_tiled_wool"
 }
